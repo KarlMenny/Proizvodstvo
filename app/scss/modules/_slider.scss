@@ -1,0 +1,150 @@
+.slider {
+
+	&__wrapper {
+		position: relative;
+	}
+
+	&__item {
+		position: relative;
+		height: calc(100vh - 100px);
+		background: #ccc;
+		background-position: center;
+		background-size: cover;
+
+		&_img-1 {
+			background-image: url('../images/slides_main/1.jpg');
+		}
+
+		&_img-2 {
+			background-image: url('../images/slides_main/2.jpg');
+		}
+
+		&_img-3 {
+			background-image: url('../images/slides_main/3.jpg');
+		}
+
+		&_img-4 {
+			background-image: url('../images/slides_main/4.jpg');
+		}
+
+		&_img-5{
+			background-image: url('../images/slides_main/5.jpg');
+		}
+
+		&_img-6 {
+			background-image: url('../images/slides_main/6.jpg');
+		}
+	}
+
+	&__title {
+		position: relative;
+		bottom: -65%;
+		padding-left: 48px;
+		font-weight: 700;
+		font-size: 30px;
+		letter-spacing: 0.08em;
+		line-height: 1.2;
+		text-transform: uppercase;
+		color: #fff;
+	}
+
+	&__pages {
+		@include pos($b: 30px);
+		width: 100%;
+
+		.slick-dots {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+		}
+
+		li {
+			padding: 0 4px;
+			cursor: pointer;
+
+			button {
+				@include size(18px, 3px);
+				outline: none;
+				font-size: 0;
+				background-color: #FFF;
+			}
+
+			&.slick-active {
+
+				button {
+					background-color: #53D9A1;;
+					outline: none;
+				}
+			}
+		}
+	}
+
+
+
+	@media (max-width: 720px) {
+
+		&__item {
+
+			&_img-pos {
+				background-position: 17% 50%;
+			}
+
+			&_img-pos-1 {
+				background-position: 0% 50%;
+			}
+
+			&_img-pos-2 {
+				background-position: 90% 50%;
+			}
+		}
+	}
+
+	@media (max-width: 513px) {
+
+		&__title {
+			font-size: 24px;
+
+			&_pl {
+				padding-left: 15px;
+			}
+		}
+	}
+
+	@media (max-width: 350px) {
+
+		&__title {
+			padding-left: 15px;
+
+			&_fz {
+				font-size: 22px;
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+
+		&__item {
+			height: calc(100vh - 50px);
+		}
+	}
+
+	@media (min-width: 992px) {
+
+		&__title {
+			font-size: 35px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+
+		&__title {
+
+			&_pos-2 {
+				text-align: right;
+			}
+		}
+	}
+}
