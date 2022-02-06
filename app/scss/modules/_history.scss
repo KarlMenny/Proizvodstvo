@@ -1,0 +1,34 @@
+.history {
+	padding-top: 70px;
+
+	&__img {
+		width: 100%;
+		height: 100%;
+	}
+
+	&__describe {
+		padding: 15px 0;
+		background: #EDEDED;
+	}
+
+	&__text {
+		padding: 10px 30px;
+		font-size: 16px;
+		line-height: 1.3;
+		letter-spacing: 0.03em;
+	}
+
+	@media (min-width: 992px) {
+		padding-top: 95px;
+
+		&__row div:first-child {
+			-webkit-box-ordinal-group: 2;
+			    -ms-flex-order: 1;
+			        order: 1;
+		}
+
+		&__text {
+			// height: 100%;
+		}
+	}
+}

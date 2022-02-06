@@ -1,0 +1,146 @@
+.footer {
+	background-color: #1B1F1B;
+
+	&__container {
+		position: relative;
+		padding: 70px 0 50px 18.23%;
+	}
+
+	&__contacts,
+	&__services {
+		margin-bottom: 80px;
+	}
+
+	&__menu {
+		margin-bottom: 50px;
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		font-weight: 700;
+		font-size: 17px;
+		letter-spacing: 0.05em;
+		color: #949494;
+	}
+
+	&__item {
+		position: relative;
+		margin-bottom: 20px;
+		font-size: 17px;
+		color: #FFF;
+
+		&_pl {
+			padding-left: 26px;
+		}
+
+		&_mb {
+			margin-bottom: 0;
+		}
+
+		& i {
+			@include pos($l: 0, $b:-2px);
+			font-size: 20px;
+			color: #A5A5A5
+		}
+	}
+
+	&__share {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		max-width: 135px;
+	}
+
+	&__link-share {
+		font-size: 25px;
+		color: #A5A5A5;
+	}
+
+	&__link-menu {
+		color: #FFF;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__logo {
+		width: 180px;
+	}
+
+	&__protect-rights {
+		display: block;
+		padding: 7px 0;
+		background: #4F4F4F;
+	}
+
+	&__link-author {
+		font-size: 10px;
+		letter-spacing: 0.03em;
+		text-align: center;
+		color: #FFF;
+	}
+
+	&__img-arrow-up {
+		display: none;
+	}
+
+	@media (min-width: 992px) {
+
+		&__container {
+
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+			padding: 65px 42px 80px;
+		}
+
+		&__contacts,
+		&__services,
+		&__menu {
+			margin-bottom: 0;
+		}
+
+		&__services {
+			padding-right: 76px;
+		}
+
+		&__link-logo {
+			@include pos($b: 78px, $l: 50%);
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
+		}
+
+		&__logo {
+			width: 145px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+
+		&__img-arrow-up {
+			display: block;
+			@include pos($t: 23px, $r: 0);
+
+			&:hover {
+				top: 17px;
+			}
+		}
+
+		&__container {
+			padding-left: 135px;
+			padding-right: 115px;
+		}
+
+		&__services {
+			padding-right: 95px;
+		}
+	}
+}
